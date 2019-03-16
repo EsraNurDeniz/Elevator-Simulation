@@ -1,0 +1,85 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Tue Dec 25 11:21:56 2018
+| Host         : DESKTOP-V4VCR2C running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file main_control_sets_placed.rpt
+| Design       : main
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    17 |
+| Unused register locations in slices containing registers |    42 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      2 |            1 |
+|      8 |            6 |
+|     10 |            2 |
+|     12 |            1 |
+|    16+ |            7 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             276 |           61 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              58 |            8 |
+| Yes          | No                    | No                     |             116 |           18 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              84 |           19 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+-------------------------------------------+--------------------------------------+------------------+----------------+
+|  Clock Signal  |               Enable Signal               |           Set/Reset Signal           | Slice Load Count | Bel Load Count |
++----------------+-------------------------------------------+--------------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG | btnC_IBUF                                 | timeReset                            |                1 |              2 |
+|  clock/clk_out | t/in2                                     | t/in2[3]_i_1_n_0                     |                1 |              8 |
+|  clock/clk_out | t/in3                                     | t/in3[3]_i_1_n_0                     |                2 |              8 |
+|  clock/clk_out | execute                                   | t/in2                                |                2 |              8 |
+|  clk_IBUF_BUFG | keypad4X4_inst0/FSM_onehot_row[4]_i_1_n_0 |                                      |                1 |              8 |
+|  clk_IBUF_BUFG | image_red[0][7]_i_1_n_0                   | image_red[0][5]_i_1_n_0              |                2 |              8 |
+|  clk_IBUF_BUFG | image_red[0][7]_i_1_n_0                   | image_red[0][1]_i_1_n_0              |                2 |              8 |
+|  clk_IBUF_BUFG | display_8x8_0/bit_sent_count[4]_i_1_n_0   |                                      |                2 |             10 |
+|  clk_IBUF_BUFG | image_blue[0][6]_i_2_n_0                  | image_blue[0][6]_i_1_n_0             |                2 |             10 |
+|  clk_IBUF_BUFG | keypad4X4_inst0/count_deb                 | keypad4X4_inst0/count_deb[5]_i_1_n_0 |                2 |             12 |
+|  clk_IBUF_BUFG | image_blue                                |                                      |                4 |             16 |
+|  clk_IBUF_BUFG | image_red[0][7]_i_1_n_0                   |                                      |                4 |             16 |
+|  clk_IBUF_BUFG | keypad4X4_inst0/clk_en2                   |                                      |                3 |             18 |
+|  clk_IBUF_BUFG | display_8x8_0/clk_en_slow                 | display_8x8_0/op_count[9]_i_1_n_0    |                5 |             20 |
+|  clk_IBUF_BUFG | display_8x8_0/color_data[0]_i_1_n_0       |                                      |                4 |             48 |
+|  clk_IBUF_BUFG |                                           | image_blue                           |                8 |             58 |
+|  clk_IBUF_BUFG |                                           |                                      |               61 |            276 |
++----------------+-------------------------------------------+--------------------------------------+------------------+----------------+
+
+
